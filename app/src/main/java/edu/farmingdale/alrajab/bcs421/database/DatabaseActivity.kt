@@ -31,8 +31,12 @@ class DatabaseActivity : AppCompatActivity() {
     }
 
     private fun writeData() {
-        dbHelper.addUser(User("Course "+Random.nextInt(6000),
-            "CSC "+Random.nextInt(6000)))
+        // Get EditText fields from user
+        val firstName = binding.firstNameEditText.text.toString()
+        val lastName = binding.lastNameEditText.text.toString()
+
+        // Save the EditText fields to the database
+        dbHelper.addUser(User(firstName, lastName))
 
     }
 

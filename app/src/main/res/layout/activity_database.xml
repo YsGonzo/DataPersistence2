@@ -5,19 +5,33 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".database.DatabaseActivity">
+    tools:context=".database.DatabaseActivity"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/read_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Read data" />
+        android:text="Read data"
+        android:layout_marginTop="50dp" />
 
     <Button
         android:id="@+id/write_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="Write data" />
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:inputType="text"/>
 </LinearLayout>

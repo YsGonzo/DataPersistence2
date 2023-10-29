@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         binding.filesBtn.setOnClickListener { processFiles() }
 
         // TODO 01:SP Add another button for saving data using Shared Preferences
+        binding.sharedPreferencesBtn.setOnClickListener { processSharedPreferences() }
+
         // TODO 02:SP Make an activity that accept the User's first and last name and save/read/update
         //  the shared preference
 
@@ -35,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Moves the user to the SharedPreferences Activity
+    private fun processSharedPreferences() {
+        startActivity(Intent(this, SharedPreferencesActivity::class.java))
+    }
     /**
      * Move to the file activity
      */
